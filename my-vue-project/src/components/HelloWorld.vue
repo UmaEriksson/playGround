@@ -28,7 +28,7 @@ export default {
 <style scoped>
 :global(body){
 
-  background-color: antiquewhite;
+  background-color:#ebedda;
 }
 .wrapper{
   display: flex;
@@ -50,8 +50,8 @@ export default {
  overflow: hidden;
  object-fit: cover;
  border-style: solid;
- border-width: 3px;
- border-color: #afe087;
+ border-width: 5px;
+ border-color: #87BAAB;
  top: 1%;
  
 }
@@ -59,7 +59,7 @@ export default {
 .hello{
   text-align: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #afe087; /* The typwriter cursor */
+  border-right: .15em solid #87BAAB; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -77,7 +77,7 @@ export default {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #afe087; }
+  50% { border-color: #87BAAB; }
 }
 h1 {
  
@@ -92,6 +92,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #87BAAB;
 }
 </style>

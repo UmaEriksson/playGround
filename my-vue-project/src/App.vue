@@ -1,15 +1,18 @@
 <template>
   
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <toDO/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import toDO from './components/toDO.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    toDO
   }
 }
 </script>
@@ -22,6 +25,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: antiquewhite;
+ 
 }
 </style>
