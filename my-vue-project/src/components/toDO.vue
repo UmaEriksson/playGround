@@ -22,6 +22,12 @@
                 </li>
 
             </ul>
+            
+            <div class="doneTasks">
+                <button class="button" v-on:click="isHidden = !isHidden"> Show done tasks </button>
+                <h2 v-if="isHidden"> {{ message2 }}</h2>
+
+            </div>
 
         </div>
     </div>
@@ -31,7 +37,9 @@
 
 import { ref } from 'vue';
 const message = ref('Needs doing:');
+const message2 = ref('Checked tasks')
 let id = 0
+
 
 const newToDo = ref('')
 const todos = ref([
@@ -60,6 +68,8 @@ todos.value = todos.value.filter((t) => t !== todo)
 
     height: 2.5em;
     font-family: "Lucida Console", "Courier New", monospace;
+    border-radius: 10%;
+    border-color: #395a3e;
 }
 
 .button{
@@ -76,6 +86,13 @@ font-family: "Lucida Console", "Courier New", monospace;
 .toDoWrapper{
 
     margin-top: 5em;
+    
+}
+
+.toDo{
+
+
+
 }
 
 </style>
