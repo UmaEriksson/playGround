@@ -6,19 +6,19 @@
             <h2>  {{ message }} </h2>
         </div>
         <div class ="toDO">
-            <form @submit.prevent="addToDo">
-                <input v-model="newToDo" required 
-        placeholder="new task"/>
+            <form  @submit.prevent="addToDo">
+                <input class="forms" v-model="newToDo" required 
+        placeholder="New task"/>
 
-                <button>"Add Task"</button>
+                <button class="button">Add Task</button>
             </form>
 
             <ul>
 
-                <li v-for="todo in todos" :key="todo.id" >
+                <li class="forms" v-for="todo in todos" :key="todo.id" >
 
                     {{ todo.text }}
-                    <button @click="removeToDo(todo)"> X </button>
+                    <button class="button"  @click="removeToDo(todo)"> X </button>
                 </li>
 
             </ul>
@@ -53,3 +53,29 @@ todos.value = todos.value.filter((t) => t !== todo)
 }
 
 </script>
+
+<style scoped>
+
+.forms{
+
+    height: 2.5em;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.button{
+border-radius: 12%;
+border-style: solid;
+border-color: #4d7b54;
+background-color: #92ca8b;
+color: #395a3e;
+height: 2em;
+margin-left: 1em;
+font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.toDoWrapper{
+
+    margin-top: 5em;
+}
+
+</style>
